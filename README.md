@@ -1,10 +1,14 @@
 # GenericInterface
 
+```
+
  public interface IKafkaCustomer<T> where T : class
  {
-        void ConsumeMessagesFromQueue();
+       
+      void ConsumeMessagesFromQueue();
  }
-  
+
+ 
  public class KafkaCustomerA : IKafkaCustomer<KafkaCustomerA>
  {
         public void ConsumeMessagesFromQueue()
@@ -39,6 +43,7 @@
             _kafkaCustomerA = kafkaCustomerA;
             _kafkaCustomerB = kafkaCustomerB;
         }
+ 
         public void CallCustomerA()
         {
             _kafkaCustomerA.ConsumeMessagesFromQueue();
@@ -49,4 +54,4 @@
             _kafkaCustomerB.ConsumeMessagesFromQueue();
         }
  }
-  
+ ``` 
