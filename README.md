@@ -11,7 +11,7 @@
         {
             var a = "I am being called";
         }
- }
+ } 
   
  public class KafkaCustomerB : IKafkaCustomer<KafkaCustomerB>
  {
